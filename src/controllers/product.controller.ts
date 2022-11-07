@@ -11,4 +11,10 @@ export default class ProductController {
 
     res.status(201).json(inserted);
   };
+
+  getAll = async (_req: Request, res: Response) => {
+    const products = await this.productService.getAll();
+
+    res.status(200).json(products);
+  };
 }

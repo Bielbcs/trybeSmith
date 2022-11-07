@@ -1,6 +1,6 @@
 export default interface IProduct {
   id?: number;
   name: string;
-  amount: number;
+  amount: string;
   orderId?: number;
 }
