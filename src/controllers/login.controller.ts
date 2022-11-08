@@ -8,9 +8,7 @@ export default class LoginController {
     const { authorization } = req.headers;
 
     const test = await this.loginService.login(req.body);
-
-    console.log(test.length);
-
+    
     if (!test.length) return res.status(401).send({ message: 'Username or password invalid' });
 
     res.status(200).json({ token: authorization });
